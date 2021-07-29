@@ -10,4 +10,4 @@ I am a Software Engineer that enjoys building web applications that help people'
 
 # My 100 Days of Code Journey
 
-This is my 100 Days of Code Journey with Python.
+This is my 100 Days of Code Journey with Python from Udemy.
