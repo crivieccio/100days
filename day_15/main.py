@@ -45,12 +45,13 @@ def beverage_prompt():
 
 
 def report():
-    for k, v in resources:
+    for k, v in resources.items():
         if k.lower() == 'coffee':
             print(f'{k.capitalize()}: {v}g')
         elif k.lower() == 'money':
             print(f'{k.capitalize()}: ${v}')
-        print(f'{k.capitalize()}: {v}ml')
+        else:
+            print(f'{k.capitalize()}: {v}ml')
 
 
 def check_resources(choice):
@@ -100,20 +101,22 @@ def make_coffee(choice):
 
 def main():
     choice = ''
-    while choice.lower() != "off":
+    while True:
         choice = beverage_prompt()
-        if choice.lower() == 'report':
+        if choice == 'off':
+            break
+        elif choice.lower() == 'report':
             report()
-            break
+            pass
+        else:
+            result = check_resources(choice=choice)
+            if not result.have_enough:
+                print(f'Sorry there is not enough {result.resource}')
+                break
 
-        result = check_resources(choice=choice)
-        if not result.have_enough:
-            print(f'Sorry there is not enough {result.resource}')
-            break
-
-        money = process_coins()
-        if inserted_enough_money(money, MENU[choice]['cost']):
-            make_coffee(choice)
+            money = process_coins()
+            if inserted_enough_money(money, MENU[choice]['cost']):
+                make_coffee(choice)
 
 
 if __name__ == "__main__":
