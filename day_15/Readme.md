@@ -13,7 +13,8 @@ Clone the project
 Go to the project directory
 
 ```bash
-  cd day15
+  cd 100days
+  cd day_15
 ```
 
 ```bash

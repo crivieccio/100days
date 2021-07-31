@@ -1,6 +1,6 @@
-# Coffee Machine Project OOP Style
+# Simple quiz game on the console
 
-A simple Coffee machine program.
+A console based quiz game.
 
 ## Run Locally
 
@@ -14,8 +14,10 @@ Go to the project directory
 
 ```bash
   cd 100days
-  cd day_16
+  cd day_17
 ```
+
+Start the game
 
 ```bash
   python main.py
